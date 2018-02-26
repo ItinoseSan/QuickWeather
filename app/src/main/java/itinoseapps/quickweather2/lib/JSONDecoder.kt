@@ -5,8 +5,8 @@ import org.json.JSONObject
 class JSONDecoder{
     fun decode(json:String):String{
         val response = JSONObject(json)
-        val weathersCompoent = response.getJSONArray("weather").getJSONObject(0)
-        val weather = weathersCompoent.getString("description")
+        val weathersComponent = response.getJSONArray("weather").getJSONObject(0)
+        val weather = weathersComponent.getString("description")
         return weather.toString()
     }
 }
