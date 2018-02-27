@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ItinoseSan/QuickWeather.svg?branch=master)](https://travis-ci.org/ItinoseSan/QuickWeather)
 # QuickWeather
 QuickWeather is simple Android application which can get current weather quickly.
 
