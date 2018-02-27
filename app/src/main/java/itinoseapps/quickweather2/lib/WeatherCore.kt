@@ -39,7 +39,10 @@ class WeatherCore {
     }
 
     private fun handleResponse(connection: HttpURLConnection):String{
-        val isr = InputStreamReader(connection.inputStream)
+        var isr = if (connection.responseCode == HttpURLConnection.HTTP_OK)
+            InputStreamReader(connection.inputStream)
+        else
+            InputStreamReader(connection.errorStream)
         val reader = BufferedReader(isr)
         val builder = StringBuilder()
         val line=reader.readLine()
