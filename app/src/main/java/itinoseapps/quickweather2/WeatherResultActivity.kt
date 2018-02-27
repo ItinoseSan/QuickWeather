@@ -26,7 +26,7 @@ class WeatherResultActivity : AppCompatActivity() {
         object :HttpAsyncTask(){
             override fun doInBackground(vararg params: Void): String? {
                 val weather = WeatherCore()
-                val json = weather.getCurrentWeather(location,"61816105fcfda6e6f29e0b2f0fa37374")
+                val json = weather.getCurrentWeather(location,"SECRET API KEY")
                 val jsondecoder = JSONDecoder()
                 return jsondecoder.decode(json)
             }
