@@ -6,8 +6,4 @@ open class HttpAsyncTask : AsyncTask<Void, Void, String>() {
     override fun doInBackground(vararg params: Void): String? {
         return null
     }
-
-    override fun onPostExecute(result: String?) {
-        super.onPostExecute(result)
-    }
 }

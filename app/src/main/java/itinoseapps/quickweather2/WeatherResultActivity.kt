@@ -33,8 +33,11 @@ class WeatherResultActivity : AppCompatActivity() {
 
             override fun onPostExecute(result: String?) {
                 when(result){
-                    "not found" -> current_weather.text ="The location could not be found."
-                    else -> current_weather.text = "Current $location 's Weather is "+result
+                    "not found" -> current_weather.text = "The location could not be found."
+                    else -> {
+                        result_sentence.text = "Current $location 's Weather"
+                        current_weather.text = result
+                    }
                 }
             }
         }.execute()
